@@ -1,0 +1,33 @@
+    # app-JepKaMoPPxdMtLfCqZjIHxdW
+
+
+// app-xaYbaPfbT7eTRdJCBBVeA08v
+
+curl -o '/root/docker/dify/dify/tmp_dir/output_filename.txt' -X POST 'http://8.138.95.13/v1/chat-messages' \
+--header 'Authorization: Bearer app-sIgMFtW2WulvTeB2ZzXVJuEL' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "inputs": {},
+    "query": "深圳旅行，3天，2人，2k，今天出发",
+    "response_mode": "streaming",
+    "conversation_id": "",
+    "user": "abc-123",
+    "files": [
+
+    ]
+}'
+
+
+curl -o '/root/docker/dify/dify/tmp_dir/output_filename.txt' -X POST 'http://localhost/v1/chat-messages' \
+--header 'Authorization: Bearer app-PNm0IqTIv3uVwfn3LHf784TH' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "inputs": {},
+    "query": "深圳旅行，3天，2人，2k，今天出发",
+    "response_mode": "streaming",
+    "conversation_id": "",
+    "user": "abc-123",
+    "files": [
+
+    ]
+}'

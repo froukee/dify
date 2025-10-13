@@ -1,0 +1,3 @@
+langdetect
+python_tsp
+numpy

@@ -1,0 +1,119 @@
+use_default_settings: true
+
+server:
+  # base_url is defined in the SEARXNG_BASE_URL environment variable, see .env and docker-compose.yml
+  secret_key: "fb5e65ba297192e0da78ae4f92e2af1b24f4f7073a13f9557066b309c59ce3f5"
+  limiter: false
+  image_proxy: true
+ui:
+  static_use_hash: true
+redis:
+  url: false
+search:
+  formats:
+    - html
+    - json
+  # autocomplete:"baidu"
+  # default_lang: "zh-CN"
+engines:
+# 启用默认禁用的引擎
+  - name: quark
+    quark_category: general
+    categories: [general]
+    engine: quark
+    shortcut: qk
+    disabled: false
+
+  - name: quark images
+    quark_category: images
+    categories: [images]
+    engine: quark
+    shortcut: qki
+    disabled: false
+
+  - name: 360search
+    engine: 360search
+    shortcut: 360so
+    disabled: false
+
+  - name: 360search videos
+    engine: 360search_videos
+    shortcut: 360sov
+    disabled: false
+
+  - name: sogou
+    engine: sogou
+    shortcut: sogou
+    disabled: false
+
+  - name: sogou images
+    engine: sogou_images
+    shortcut: sogoui
+    disabled: false
+
+  - name: sogou videos
+    engine: sogou_videos
+    shortcut: sogouv
+    disabled: false
+
+  - name: baidu
+    baidu_category: general
+    categories: [general]
+    engine: baidu
+    shortcut: bd
+    disabled: false
+
+  - name: baidu images
+    baidu_category: images
+    categories: [images]
+    engine: baidu
+    shortcut: bdi
+    disabled: false
+
+  - name: baidu kaifa
+    baidu_category: it
+    categories: [it]
+    engine: baidu
+    disabled: false
+
+
+
+  # 禁用默认启用的引擎
+  - name: bing
+    engine: bing
+    disabled: true
+  - name: bilibili
+    engine: bilibili
+    disabled: true
+  - name: archlinuxwiki
+    engine: archlinux
+    disabled: true
+  - name: duckduckgo
+    engine: duckduckgo
+    disabled: true 
+
+  - name: github
+    engine: github
+    shortcut: gh
+    disabled: true
+  - name: wikipedia
+    engine: wikipedia
+    disabled: true
+  - name: google
+    engine: google
+    disabled: true
+  - name: youtube
+    engine: youtube_noapi
+    disabled: true
+  - name: duckduckgo
+    engine: duckduckgo
+    disabled: true
+  - name: qwant
+    engine: qwant
+    disabled: true
+  - name: brave
+    engine: brave
+    disabled: true
+  - name: startpage
+    engine: startpage
+    disabled: true
